@@ -1,9 +1,13 @@
 package racingcar.domain
 
 class Car(
-    private var moveCount: MoveCount = MoveCount.from(0)
+    private val name: CarName,
+    private var moveCount: MoveCount
 ) {
     fun forward() {
         moveCount = moveCount.increase()
     }
+
+    fun name(): String = name.value()
+    fun position(): Int = moveCount.value()
 }
