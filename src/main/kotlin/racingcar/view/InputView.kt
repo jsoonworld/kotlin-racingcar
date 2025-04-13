@@ -4,11 +4,11 @@ import camp.nextstep.edu.missionutils.Console
 
 class InputView {
 
-    fun readCarNames(){
-        val carNames = Console.readLine()
+    fun readCarNames(): String{
+        return Console.readLine()
     }
 
-    fun readTryTimes() {
-        val tryTimes = Console.readLine()
+    fun readTryTimes(): String{
+        return Console.readLine()
     }
 }
