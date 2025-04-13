@@ -14,5 +14,8 @@ class RaceManager(
             cars.moveAll(moveCondition)
             outputView.printRoundResult(cars)
         }
+
+        val winners = cars.findWinners()
+        outputView.printWinners(winners)
     }
 }
