@@ -1,7 +1,6 @@
 package racingcar.view
 
 import racingcar.domain.Car
-import racingcar.domain.Cars
 
 class OutputView {
     private val INPUT_CARNAME_MESSAGE: String = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"
@@ -21,9 +20,9 @@ class OutputView {
         println(ROUND_RESULT_INTRO_MESSAGE)
     }
 
-    fun printRoundResult(cars: Cars) {
-        cars.forEach{ car ->
-            println("${car.name()} : ${"-".repeat(car.position())}")
+    fun printRoundResult(cars: List<Pair<String, Int>>) {
+        cars.forEach{ (name, position) ->
+            println("$name : ${"-".repeat(position)}")
         }
         println()
     }
