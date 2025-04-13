@@ -4,9 +4,11 @@ class Cars(
     private val values: List<Car>
 ) : Iterable<Car> by values {
 
-    fun findByName(name: String): Car?{
-        return values.find { it.name() == name }
+    fun moveAll(condition: MoveCondition) {
+        values.forEach { car ->
+            if (condition.canMove()) {
+                car.forward()
+            }
+        }
     }
-
-    fun all(): List<Car> = values
 }
